@@ -6,6 +6,12 @@ name = "pypi"
 [packages]
 streamlit = "*"
 scrapy = "*"
+flake8 = "*"
+isort = "*"
+black = "*"
+uvicorn = "*"
+requests = "*"
+scrapy-playwright = "*"
 
 [dev-packages]
 
