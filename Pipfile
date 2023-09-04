@@ -12,6 +12,7 @@ black = "*"
 uvicorn = "*"
 requests = "*"
 scrapy-playwright = "*"
+pandas = "*"
 
 [dev-packages]
 
