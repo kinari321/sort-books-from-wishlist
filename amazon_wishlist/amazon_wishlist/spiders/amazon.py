@@ -14,11 +14,7 @@ class AmazonSpider(scrapy.Spider):
     def parse(self, response):
         book = AmazonWishlistItem()
 
-        book["title"] = response.xpath('//*[@id="productTitle"]/text()').get()
-        
-        book["author"] = response.xpath(
-            '//*[@class="author"]/a[@class="a-link-normal"]/text()'
-        ).get()
+        book["title"] = response.xpath('//*[@class="a-row a-size-small"]//a[@class="a-link-normal"]/@title').getall()
         book["price"] = response.xpath('//*[@id="price"]/text()').get()
         book["publisher"] = response.xpath(
             '//*[@id="detailBullets_feature_div"]/ul/li[1]/span/span[2]/text()'
