@@ -11,6 +11,7 @@ class AmazonWishlistItem(scrapy.Item):
     author = scrapy.Field()
     price = scrapy.Field()
     publisher = scrapy.Field()
+    review_star = scrapy.Field()
     release_date = scrapy.Field()
     isbn10 = scrapy.Field()
 
